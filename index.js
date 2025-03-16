@@ -46,7 +46,7 @@
                     "🟠 - WASTE CATEGORIES: High-Risk Infectious Waste. - TYPE OF MATERIALS: Microorganism cultures.Biological materials from patients infected with particularly infectious agents. - MANAGEMENT: Red-colored containers – Materials for sterilization."
                 ],
                 "cautionTitle": " ",
-                "cautionParagraph": " "
+                "cautionParagraph": "  "
             }
         };
 
