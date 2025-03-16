@@ -93,13 +93,18 @@
         document.body.classList.remove("fade-out");
     }, 500); // Μικρή καθυστέρηση για ομαλή εναλλαγή
     }
-        function setupBackToTopButton() {
-            let backToTopBtn = document.getElementById("backToTop");
-            window.addEventListener("scroll", function () {
-                backToTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
-            });
-            backToTopBtn.addEventListener("click", function () {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
+    const backToTopButton = document.querySelector(".back-to-top");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) { // Εμφανίζεται μετά από 50px scroll
+            backToTopButton.style.display = "flex";
+        } else {
+            backToTopButton.style.display = "none";
         }
+    });
+
+    // Λειτουργία επιστροφής στην κορυφή
+    backToTopButton.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 })();
